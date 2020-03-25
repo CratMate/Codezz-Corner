@@ -1,4 +1,4 @@
-## Codezz-Corner C@|]ES
+## Codezz Corner C@|]ES
 ## Astreik Pattern
     import java.util.Scanner;
     public class Main {
