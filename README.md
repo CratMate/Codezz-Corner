@@ -1,4 +1,52 @@
 ## Codezz Corner C@|]ES
+## Grids in Grid Pattern
+    import java.util.Scanner;
+    public class Main {
+        public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int R=sc.nextInt();
+        int C=sc.nextInt();
+        int M=sc.nextInt();
+        int N=sc.nextInt();
+        int plus=N-1;
+        for(int i=0;i<M;i++){ 
+            for(int j=0;j<R;j++){
+                for(int k1=0;k1<N;k1++){
+                    System.out.print("*".repeat(C));
+                    if(k1!=N-1){
+                    System.out.print("|");
+                    }
+                }
+                System.out.println();
+            }int ctr=0;
+            if(i!=M-1){
+                while(ctr<plus){
+                System.out.print("-".repeat(C)+"+");
+                ctr++;
+                }
+                System.out.print("-".repeat(C));
+            }
+       }  }  }
+       
+   Input : 
+   
+    2 3
+    4 4
+    
+  Output : 
+  
+    ***|***|***|***
+    ***|***|***|***
+    ---+---+---+---
+    ***|***|***|***
+    ***|***|***|***
+    ---+---+---+---
+    ***|***|***|***
+    ***|***|***|***
+    ---+---+---+---
+    ***|***|***|***
+    ***|***|***|***
+        
 ## Digital Pattern
     import java.util.Scanner;
     public class Main {
