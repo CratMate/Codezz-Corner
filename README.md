@@ -1,4 +1,37 @@
 ## Codezz Corner C@|]ES
+## Remove Unbalanced Brackets in java
+    import java.util.*;
+    public class Main {
+        public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.next();
+        int len=s.length();
+        int hash[]=new int[len];
+        Stack<Integer> stack=new Stack<Integer>();
+        for(int i=0;i<len;i++){
+            char c=s.charAt(i);
+            if(Character.isLetter(c)){       
+               hash[i]=1;
+            }
+            else if(c=='('){
+               stack.push(i);
+            }
+            else if(c==')' && stack.empty()==false && s.charAt(stack.peek())=='('){
+               hash[stack.peek()]=1;
+               hash[i]=1;
+               stack.pop();
+            }
+        }
+        for(int i=0;i<len;i++){
+            if(hash[i]==1){
+                System.out.print(s.charAt(i));
+             }
+        } } }       //Time complexity : O(n)
+       
+   Input : (ab))(cd))
+   
+   Output : (ab)(cd)
+           
 ## Grids in Grid Pattern
     import java.util.Scanner;
     public class Main {
