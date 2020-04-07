@@ -26,7 +26,7 @@
             if(hash[i]==1){
                 System.out.print(s.charAt(i));
              }
-        } } }       //Time complexity : O(n)
+        } } }       //Time complexity : O(2n)
        
    Input : (ab))(cd))
    
