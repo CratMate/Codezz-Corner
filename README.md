@@ -1,4 +1,55 @@
 ## Codezz Corner C@|]ES
+## Quadrant with Maximum odd numbers in a Matrix
+    import java.util.Scanner;
+    public class Main {
+        public static boolean check(int sum1,int sum2,int sum3,int sum4){
+        return sum1>sum2 && sum1>sum3 && sum1>sum4;
+        }
+        public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int R=sc.nextInt();
+        int C=sc.nextInt();
+        int mat[][]=new int[R][C];
+        for(int i=0;i<R;i++){
+            for(int j=0;j<C;j++){
+            mat[i][j]=sc.nextInt();
+            if(i<R/2 && j<R/2 && mat[i][j]%2!=0){
+            sum1++;
+            }
+            else if(i<R/2 && j>=R/2 && mat[i][j]%2!=0){
+            sum2++;
+            }
+            else if(i>=R/2 && j<R/2 && mat[i][j]%2!=0){
+            sum3++;
+            }
+            else if(i>=R/2 && j>=R/2 && mat[i][j]%2!=0){
+            sum4++;
+            }
+          }
+        } int x,y,p,q;
+        if(check(sum1,sum2,sum3,sum4)){
+        x=0;y=(R/2)-1;p=0,q=(C/2)-1;
+        }
+        if(check(sum2,sum3,sum4,sum1)){
+        x=0;y=(R/2)-1;p=C/2,q=C-1;
+        }
+        if(check(sum3,sum4,sum1,sum2)){
+        x=R/2;y=R-1;p=0,q=(C/2)-1;
+        }
+        if(check(sum4,sum1,sum2,sum3)){
+        x=R/2;y=R-1;p=C/2,q=C-1;
+        }
+        else{
+        System.out.print("-1");
+        }
+        for(int i=x;i<=y;i++){
+            for(int j=p;j<=q;j++){
+                System.out.print(mat[i][j]+" ");
+            }
+            System.out.println();
+        }
+     } }
+              
 ## Remove Unbalanced Brackets in java
     import java.util.*;
     public class Main {
